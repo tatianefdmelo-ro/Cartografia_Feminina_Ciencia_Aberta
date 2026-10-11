@@ -1,1 +1,206 @@
-<div class="dashboard-frame-wrap"><iframe title="Cartografia_Feminina_Ciencia_Aberta" width="600" height="373.5" src="https://app.fabric.microsoft.com/view?r=eyJrIjoiYTJhYjdiYjQtOWU5ZC00MGI1LWEzMGQtNTc1YTAxMGI0OTNkIiwidCI6ImE0ZWJhOGEyLWRiZTQtNDI4Mi05ZWU2LTgyMTNlMmMyZmU3ZSJ9" frameborder="0" allowFullScreen="true"></iframe></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mapeamento da produção, instituições e redes de colaboração de mulheres pesquisadoras em Ciência Aberta (2015–2026), com dados do OpenAlex.">
+<title>Cartografia Feminina na Ciência Aberta</title>
+<style>
+  :root {
+    --bg-top: #0D0B22;
+    --bg-mid: #1B1440;
+    --bg-bottom: #2A1638;
+    --card-fill: #181233;
+    --card-border: #3D3560;
+    --lilac: #C9B6E4;
+    --offwhite: #F6EFE6;
+    --pink-accent: #E0A0B4;
+    --label: #8A80AE;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: linear-gradient(135deg, var(--bg-top) 0%, var(--bg-mid) 55%, var(--bg-bottom) 100%);
+    background-attachment: fixed;
+    color: var(--offwhite);
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  a { color: var(--pink-accent); }
+
+  .hero { padding: 100px 8vw 60px; max-width: 1100px; margin: 0 auto; }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--label);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.15;
+    max-width: 15ch;
+  }
+
+  .subtitle { font-size: 18px; color: var(--lilac); max-width: 55ch; margin-top: 28px; }
+
+  section { max-width: 1100px; margin: 0 auto; padding: 50px 8vw; }
+
+  .section-title {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .prose { max-width: 68ch; color: #D8D2E8; font-size: 16px; }
+  .prose p + p { margin-top: 16px; }
+
+  .note {
+    margin-top: 28px;
+    padding: 20px 24px;
+    background: var(--card-fill);
+    border: 1px solid var(--card-border);
+    border-left: 3px solid var(--pink-accent);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--lilac);
+    max-width: 68ch;
+  }
+  .note strong { color: var(--offwhite); }
+
+  .dashboard-frame-wrap {
+    background: var(--card-fill);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  .dashboard-frame-wrap iframe {
+    width: 100%;
+    height: 65vw;
+    max-height: 720px;
+    min-height: 420px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .theme-card {
+    background: var(--card-fill);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .theme-card .label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--label);
+    text-transform: uppercase;
+  }
+
+  .theme-card .value {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: var(--pink-accent);
+    margin-top: 6px;
+  }
+
+  footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 8vw 80px;
+    border-top: 1px solid var(--card-border);
+    font-size: 13px;
+    color: var(--label);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 60px 6vw 40px; }
+    section { padding: 40px 6vw; }
+    footer { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="eyebrow">Portfólio de Análise de Dados</div>
+    <h1>Cartografia Feminina na Ciência Aberta</h1>
+    <p class="subtitle">Mapeando trajetórias, perfis e redes de mulheres pesquisadoras no campo da Ciência Aberta, do Acesso Aberto e da Comunicação Científica (2015–2026).</p>
+  </div>
+
+  <section>
+    <div class="section-title">Sobre a pesquisa</div>
+    <div class="prose">
+      <p>Este projeto investiga a presença e a produção científica de mulheres no campo da Ciência Aberta. A pergunta central é simples de formular e difícil de responder sem dados: mulheres estão produzindo de forma consistente nesse campo? Em quais instituições? Colaborando com quem?</p>
+      <p>O levantamento inicial considerou Brapci, SciELO e Web of Science. O projeto passou a usar o <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, uma base acadêmica aberta e gratuita, porque ela permite reproduzir todo o processo de extração sem depender de assinatura institucional.</p>
+    </div>
+
+    <div class="note">
+      <strong>Nota metodológica:</strong> o gênero das autoras foi <em>inferido</em> a partir do primeiro nome, com a biblioteca gender-guesser. Não se trata de autodeclaração, e o método pode errar, principalmente com nomes unissex. Os resultados devem ser lidos como estimativas.
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Dashboard interativo</div>
+    <div class="prose">
+      <p>Explore os dados abaixo: filtre por ano, tema, país e tipo de acesso.</p>
+    </div>
+
+    <div class="dashboard-frame-wrap">
+      <!-- EDITAR: troque COLE_AQUI_O_LINK_DO_POWER_BI pelo link gerado em
+           Power BI Service > Arquivo > Incorporar relatório > Publicar na web (público).
+           O link começa com https://app.powerbi.com/view?r=...  -->
+<iframe title="Cartografia_Feminina_Ciencia_Aberta" width="600" height="373.5" src="https://app.fabric.microsoft.com/view?r=eyJrIjoiYTJhYjdiYjQtOWU5ZC00MGI1LWEzMGQtNTc1YTAxMGI0OTNkIiwidCI6ImE0ZWJhOGEyLWRiZTQtNDI4Mi05ZWU2LTgyMTNlMmMyZmU3ZSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Temas mapeados</div>
+    <div class="prose">
+      <p>Cada trabalho foi classificado pela presença literal dos termos abaixo no título ou resumo, e não pela categoria geral atribuída pelo OpenAlex, que se mostrou ampla demais para o recorte desta pesquisa. Um trabalho pode ter mais de um tema.</p>
+    </div>
+    <div class="themes-grid">
+      <div class="theme-card"><div class="label">Tema</div><div class="value">Open Access</div></div>
+      <div class="theme-card"><div class="label">Tema</div><div class="value">Open Science</div></div>
+      <div class="theme-card"><div class="label">Tema</div><div class="value">Ciência Aberta</div></div>
+      <div class="theme-card"><div class="label">Tema</div><div class="value">Scientific Communication</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Metodologia e reprodutibilidade</div>
+    <div class="prose">
+      <p>O código usado para extrair, limpar e classificar os dados está disponível publicamente, junto com os arquivos CSV finais, para que qualquer pessoa possa auditar ou reproduzir a análise.</p>
+      <!-- EDITAR: troque o endereço abaixo pelo link do seu repositório -->
+      <p><a href="https://github.com/tatianefdmelo-ro/Cartografia_Feminina_Ciencia_Aberta/tree/main" target="_blank" rel="noopener">→ Ver o repositório no GitHub</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Cartografia Feminina na Ciência Aberta · por tatianefdmelo-ro</span>
+    <span>Dados: OpenAlex</span>
+  </footer>
+
+</body>
+</html>
